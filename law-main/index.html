@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justice & Associates Law Firm</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+<nav class="bg-slate-900 text-white sticky top-0 relative z-50">
+
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex-shrink-0">
+                <a href="index.html"><h1 class="text-2xl font-bold hover:text-amber-600 transition-colors">Justice & Associates</h1></a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-1">
+                <!-- Social Media Icons for Desktop -->
+                <div class="flex items-center space-x-4 mr-8 border-r border-gray-700 pr-8">
+                    <a href="#" class="text-white hover:text-amber-600 transition-colors"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white hover:text-amber-600 transition-colors"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white hover:text-amber-600 transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+                <div class="flex items-center divide-x divide-gray-700">
+                    <a href="index.html" class="hover:text-amber-600 px-4 py-2 transition-colors">Home</a>
+                    
+                    <div class="relative group px-4">
+                        <a href="#" class="hover:text-amber-600 py-2 transition-colors inline-flex items-center">
+                            About Us <i class="fas fa-chevron-down ml-2 text-xs"></i>
+                        </a>
+                        <div class="absolute hidden group-hover:block w-48 bg-white text-gray-800 shadow-lg rounded-md top-full z-50">
+                            <div class="py-2 divide-y divide-gray-100">
+                                <a href="about us_history.html" class="block px-4 py-2 hover:bg-amber-600 hover:text-white transition-colors">Our History</a>
+                                <a href="about us_mission & values.html" class="block px-4 py-2 hover:bg-amber-600 hover:text-white transition-colors">Mission & Values</a>
+                                <a href="about us_our team.html" class="block px-4 py-2 hover:bg-amber-600 hover:text-white transition-colors">Our Team</a>
+                                <a href="about us_location.html" class="block px-4 py-2 hover:bg-amber-600 hover:text-white transition-colors">Location</a>
+                                <a href="about us_careers.html" class="block px-4 py-2 hover:bg-amber-600 hover:text-white transition-colors">Careers</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group px-4">
+                        <a href="#" class="hover:text-amber-600 py-2 transition-colors inline-flex items-center">
+                            Practice Areas <i class="fas fa-chevron-down ml-2 text-xs"></i>
+                        </a>
+                        <div class="absolute hidden group-hover:block w-48 bg-white text-gray-800 shadow-lg rounded-md top-full z-50">
+                            <div class="py-2 divide-y divide-gray-100">
+                                <a href="#" class="block px-4 py-2 hover:bg-amber-600 hover:text-white transition-colors">Criminal Law</a>
+                                <a href="#" class="block px-4 py-2 hover:bg-amber-600 hover:text-white transition-colors">Family Law</a>
+                                <a href="#" class="block px-4 py-2 hover:bg-amber-600 hover:text-white transition-colors">Corporate Law</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="hover:text-amber-600 px-4 py-2 transition-colors">Legal Insights</a>
+                    <a href="#" class="hover:text-amber-600 px-4 py-2 transition-colors">Testimonials</a>
+                    <a href="#" class="hover:text-amber-600 px-4 py-2 transition-colors">Contact</a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white hover:text-amber-600 p-2 focus:outline-none transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden fixed inset-0 bg-slate-900 bg-opacity-95 transform translate-x-full transition-transform duration-300 ease-in-out z-50">
+        <!-- Header with close button -->
+        <div class="flex justify-between items-center p-4 border-b border-gray-700">
+            <h2 class="text-white text-xl font-bold">Menu</h2>
+            <button id="close-menu" class="text-white hover:text-amber-600 p-2 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu Items -->
+        <div class="h-[calc(100vh-70px)] overflow-y-auto">
+            <div class="flex flex-col p-4 divide-y divide-gray-700">
+                <a href="#" class="text-white text-lg font-medium hover:bg-amber-600 py-3 px-4 rounded-lg transition-all">
+                    Home
+                </a>
+                
+                <!-- About Us Dropdown -->
+                <div class="py-2">
+                    <button class="mobile-dropdown-btn w-full text-white text-lg font-medium hover:bg-amber-600 py-3 px-4 rounded-lg transition-all flex items-center justify-between">
+                        About Us
+                        <i class="fas fa-chevron-down text-sm transition-transform duration-300"></i>
+                    </button>
+                    <div class="mobile-dropdown-content hidden px-4 py-2 mt-1">
+                        <a href="about us_our history.html" class="block text-white hover:bg-amber-600 px-4 py-2 rounded-md transition-colors">Our History</a>
+                        <a href="about us_mission & values.html" class="block text-white hover:bg-amber-600 px-4 py-2 rounded-md transition-colors">Mission & Values</a>
+                        <a href="about us_our team.html" class="block text-white hover:bg-amber-600 px-4 py-2 rounded-md transition-colors">Our Team</a>
+                        <a href="about us_location.html" class="block text-white hover:bg-amber-600 px-4 py-2 rounded-md transition-colors">Location</a>
+                        <a href="about us_careers.html" class="block text-white hover:bg-amber-600 px-4 py-2 rounded-md transition-colors">Careers</a>
+                    </div>
+                </div>
+
+                <!-- Practice Areas Dropdown -->
+                <div class="py-2">
+                    <button class="mobile-dropdown-btn w-full text-white text-lg font-medium hover:bg-amber-600 py-3 px-4 rounded-lg transition-all flex items-center justify-between">
+                        Practice Areas
+                        <i class="fas fa-chevron-down text-sm transition-transform duration-300"></i>
+                    </button>
+                    <div class="mobile-dropdown-content hidden px-4 py-2 mt-1">
+                        <a href="#" class="block text-white hover:bg-amber-600 px-4 py-2 rounded-md transition-colors">Criminal Law</a>
+                        <a href="#" class="block text-white hover:bg-amber-600 px-4 py-2 rounded-md transition-colors">Family Law</a>
+                        <a href="#" class="block text-white hover:bg-amber-600 px-4 py-2 rounded-md transition-colors">Corporate Law</a>
+                    </div>
+                </div>
+
+                <a href="#" class="text-white text-lg font-medium hover:bg-amber-600 py-3 px-4 rounded-lg transition-all">
+                    Legal Insights
+                </a>
+                <a href="#" class="text-white text-lg font-medium hover:bg-amber-600 py-3 px-4 rounded-lg transition-all">
+                    Testimonials
+                </a>
+                <a href="#" class="text-white text-lg font-medium hover:bg-amber-600 py-3 px-4 rounded-lg transition-all">
+                    Contact
+                </a>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="absolute bottom-0 left-0 right-0 bg-slate-800 p-6">
+                <div class="flex justify-center space-x-8">
+                    <a href="#" class="text-white hover:text-amber-600 transition-colors">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-amber-600 transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-amber-600 transition-colors">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
+    
+    dropdownBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const content = this.nextElementSibling;
+            const icon = this.querySelector('.fa-chevron-down');
+            
+            // Close other dropdowns
+            dropdownBtns.forEach(otherBtn => {
+                if (otherBtn !== btn) {
+                    otherBtn.nextElementSibling.classList.add('hidden');
+                    otherBtn.querySelector('.fa-chevron-down').style.transform = 'rotate(0deg)';
+                }
+            });
+
+            // Toggle current dropdown
+            content.classList.toggle('hidden');
+            icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+        });
+    });
+});
+</script>
+
+<!-- Hero Section with Modern Carousel -->
+<div class="relative h-screen max-h-[800px] overflow-hidden">
+    <!-- Carousel Container -->
+    <div class="carousel relative w-full h-full">
+        <!-- Slides -->
+        <div class="slides">
+            <div class="slide active">
+                <div class="overlay"></div>
+                <img src="hero-image.jpg" alt="Courtroom">
+                <div class="content">
+                    <h1>Defending Your Rights</h1>
+                    <p>With over 10 years of experience, we fight tirelessly for justice on your behalf.</p>
+                    <button>Schedule Consultation</button>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="overlay"></div>
+                <img src="hero-image2.jpg" alt="Legal Professional">
+                <div class="content">
+                    <h1>Expert Legal Solutions</h1>
+                    <p>Complex legal challenges require sophisticated solutions. Let us guide you.</p>
+                    <button>Learn More</button>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="overlay"></div>
+                <img src="hero-image3.jpg" alt="Legal Agreement">
+                <div class="content">
+                    <h1>Your Success Is Our Priority</h1>
+                    <p>Dedicated legal representation when you need it most.</p>
+                    <button>Get Legal Help</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-dots"></div>
+        <button class="prev">‹</button>
+        <button class="next">›</button>
+    </div>
+</div>
+
+<style>
+    .carousel {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .slides {
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transform: scale(1.1);
+        transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    }
+
+    .slide.active {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+    }
+
+    .content {
+        position: absolute;
+        bottom: 20%;
+        left: 10%;
+        max-width: 600px;
+        color: white;
+    }
+
+    .content h1 {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .content p {
+        font-size: 1.25rem;
+        margin-top: 10px;
+        opacity: 0.9;
+    }
+
+    .content button {
+        margin-top: 20px;
+        padding: 12px 24px;
+        background: #D97706;
+        color: white;
+        font-size: 1rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .content button:hover {
+        background: #B45309;
+    }
+
+    .nav-dots {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+    }
+
+    .nav-dots span {
+        width: 10px;
+        height: 10px;
+        background: white;
+        opacity: 0.5;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .nav-dots span.active {
+        opacity: 1;
+    }
+
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        font-size: 2rem;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .prev:hover, .next:hover {
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .prev {
+        left: 20px;
+    }
+
+    .next {
+        right: 20px;
+    }
+</style>
+
+<script>
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.querySelector('.nav-dots');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+        });
+        slides[index].classList.add('active');
+
+        // Update navigation dots
+        document.querySelectorAll('.nav-dots span').forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    // Create navigation dots dynamically
+    slides.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.addEventListener('click', () => {
+            currentSlide = i;
+            showSlide(currentSlide);
+        });
+        dotsContainer.appendChild(dot);
+    });
+
+    // Initialize carousel
+    showSlide(currentSlide);
+    setInterval(nextSlide, 5000);
+
+    // Add event listeners
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
+</script>
+<!-- Practice Areas Overview -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 animate-fade-in">Our Practice Areas</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <i class="fas fa-gavel text-4xl text-amber-600 mb-4 animate-bounce"></i>
+                <h3 class="text-xl font-bold mb-3">Criminal Law</h3>
+                <p class="text-gray-600 mb-4">Expert defense in criminal cases, protecting your rights and freedom.</p>
+                <a href="#" class="text-amber-600 hover:text-amber-700 font-medium group">Learn More <span class="inline-block transition-transform duration-200 group-hover:translate-x-2">→</span></a>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <i class="fas fa-users text-4xl text-amber-600 mb-4 animate-pulse"></i>
+                <h3 class="text-xl font-bold mb-3">Family Law</h3>
+                <p class="text-gray-600 mb-4">Compassionate guidance through divorce, custody, and family matters.</p>
+                <a href="#" class="text-amber-600 hover:text-amber-700 font-medium group">Learn More <span class="inline-block transition-transform duration-200 group-hover:translate-x-2">→</span></a>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <i class="fas fa-building text-4xl text-amber-600 mb-4 animate-pulse"></i>
+                <h3 class="text-xl font-bold mb-3">Corporate Law</h3>
+                <p class="text-gray-600 mb-4">Strategic legal solutions for businesses of all sizes.</p>
+                <a href="#" class="text-amber-600 hover:text-amber-700 font-medium group">Learn More <span class="inline-block transition-transform duration-200 group-hover:translate-x-2">→</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fade-in 1s ease-out;
+}
+</style>
+
+<!-- Why Choose Us Section -->
+<section class="relative py-20 overflow-hidden">
+    <!-- Background with overlay -->
+    <div class="absolute inset-0 z-0">
+        <img src="legal-office.jpg" alt="Legal Office" class="object-cover w-full h-full">
+        <div class="absolute inset-0 bg-slate-900/80"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Justice & Associates?</h2>
+            <p class="text-gray-300 max-w-2xl mx-auto">With decades of experience and a commitment to excellence, we deliver exceptional legal services tailored to your needs.</p>
+        </div>
+
+        <!-- Accordion Container -->
+        <div class="max-w-3xl mx-auto space-y-4">
+            <!-- Accordion Items -->
+            <div class="accordion-item bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden">
+                <button class="w-full flex items-center justify-between p-4 text-white hover:bg-white/20 transition-all">
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-award text-amber-600 text-2xl"></i>
+                        <span class="font-semibold text-lg">Exceptional Track Record</span>
+                    </div>
+                    <i class="fas fa-plus transform transition-transform duration-300"></i>
+                </button>
+                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                    <div class="p-4 text-gray-300">
+                        Our firm has successfully handled thousands of cases with a 95% success rate. We've recovered millions in damages for our clients and established landmark precedents in multiple practice areas.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden">
+                <button class="w-full flex items-center justify-between p-4 text-white hover:bg-white/20 transition-all">
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-user-tie text-amber-600 text-2xl"></i>
+                        <span class="font-semibold text-lg">Expert Legal Team</span>
+                    </div>
+                    <i class="fas fa-plus transform transition-transform duration-300"></i>
+                </button>
+                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                    <div class="p-4 text-gray-300">
+                        Our attorneys are recognized leaders in their fields, with advanced degrees from top law schools and decades of combined experience in complex litigation.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden">
+                <button class="w-full flex items-center justify-between p-4 text-white hover:bg-white/20 transition-all">
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-clock text-amber-600 text-2xl"></i>
+                        <span class="font-semibold text-lg">24/7 Availability</span>
+                    </div>
+                    <i class="fas fa-plus transform transition-transform duration-300"></i>
+                </button>
+                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                    <div class="p-4 text-gray-300">
+                        Legal emergencies don't wait for business hours. Our team is available around the clock to provide immediate assistance when you need it most.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.accordion-item button').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('.fas.fa-plus');
+                const allContents = document.querySelectorAll('.accordion-content');
+                const allIcons = document.querySelectorAll('.accordion-item button .fas.fa-plus');
+
+                allContents.forEach(c => {
+                    if (c !== content) {
+                        c.style.maxHeight = '0';
+                    }
+                });
+
+                allIcons.forEach(i => {
+                    if (i !== icon) {
+                        i.style.transform = 'rotate(0deg)';
+                    }
+                });
+
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(45deg)';
+                }
+            });
+        });
+
+        // Parallax effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const section = document.querySelector('section');
+            const background = section.querySelector('.absolute');
+            background.style.transform = `translateY(${scrolled * 0.5}px)`;
+        });
+    </script>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <!-- Main Footer Content -->
+            <div class="grid md:grid-cols-4 gap-8 mb-8 pb-8 border-b border-gray-700">
+            <!-- About Section -->
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold text-amber-600">Justice & Associates</h3>
+                <p class="text-gray-300 hover:text-white transition-colors duration-300">
+                Committed to excellence in legal services since 2015. We provide expert counsel with integrity and dedication.
+                </p>
+                <!-- Social Media Icons -->
+                <div class="flex space-x-4 pt-4">
+                <a href="#" class="text-gray-400 hover:text-amber-600 transform hover:scale-110 transition-all">
+                    <i class="fab fa-facebook-f text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-amber-600 transform hover:scale-110 transition-all">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-amber-600 transform hover:scale-110 transition-all">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xl font-bold text-amber-600 mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-amber-600 transition-colors flex items-center gap-2">
+                    <i class="fas fa-chevron-right text-xs"></i>About Us</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-amber-600 transition-colors flex items-center gap-2">
+                    <i class="fas fa-chevron-right text-xs"></i>Practice Areas</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-amber-600 transition-colors flex items-center gap-2">
+                    <i class="fas fa-chevron-right text-xs"></i>Privacy Policy</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-amber-600 transition-colors flex items-center gap-2">
+                    <i class="fas fa-chevron-right text-xs"></i>Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Information -->
+            <div>
+                <h3 class="text-xl font-bold text-amber-600 mb-4">Contact Us</h3>
+                <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                    <i class="fas fa-map-marker-alt text-amber-600 mt-1"></i>
+                    <span class="text-gray-300">Victoria Avenue<br>Blantyre, Malawi</span>
+                </li>
+                <li class="flex items-center gap-3">
+                    <i class="fas fa-phone text-amber-600"></i>
+                    <a href="tel:+2651234567" class="text-gray-300 hover:text-amber-600 transition-colors">+265 1 234 567</a>
+                </li>
+                <li class="flex items-center gap-3">
+                    <i class="fas fa-envelope text-amber-600"></i>
+                    <a href="mailto:info@justice&associates.com" class="text-gray-300 hover:text-amber-600 transition-colors">info@justice.com</a>
+                </li>
+                </ul>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div>
+                <h3 class="text-xl font-bold text-amber-600 mb-4">Newsletter</h3>
+                <p class="text-gray-300 mb-4">Stay updated with our latest legal insights and news.</p>
+                <form class="space-y-3">
+                <input type="email" placeholder="Your email address" 
+                    class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-amber-600 text-white">
+                <button type="submit" 
+                    class="w-full bg-amber-600 hover:bg-amber-700 text-white py-2 px-4 rounded-lg transition-colors">
+                    Subscribe
+                </button>
+                </form>
+            </div>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="text-center text-gray-400 pt-4">
+            <p>&copy; 2025 Justice & Associates. All rights reserved.</p>
+            </div>
+
+            <!-- Scroll to Top Button -->
+            <button id="scrollToTop" 
+            class="fixed bottom-8 right-8 bg-amber-600 text-white p-3 rounded-full shadow-lg hover:bg-amber-700 transition-colors hidden">
+            <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+
+        <script>
+            // Scroll to Top functionality
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            
+            window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.remove('hidden');
+            } else {
+                scrollToTopBtn.classList.add('hidden');
+            }
+            });
+
+            scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            });
+        </script>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.remove('translate-x-full');
+        });
+
+        document.getElementById('close-menu').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.add('translate-x-full');
+        });
+    </script>
+</body>
+</html>

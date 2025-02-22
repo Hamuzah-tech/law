@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justice & Associates Law Firm</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+<nav class="bg-slate-900 text-white sticky top-0 relative z-50">
+
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex-shrink-0">
+                <a href="index.html"><h1 class="text-2xl font-bold hover:text-amber-600 transition-colors">Justice & Associates</h1></a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-1">
+                <!-- Social Media Icons for Desktop -->
+                <div class="flex items-center space-x-4 mr-8 border-r border-gray-700 pr-8">
+                    <a href="#" class="text-white hover:text-amber-600 transition-colors"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white hover:text-amber-600 transition-colors"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white hover:text-amber-600 transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+                <div class="flex items-center divide-x divide-gray-700">
+                    <a href="index.html" class="hover:text-amber-600 px-4 py-2 transition-colors">Home</a>
+                    
+                    <div class="relative group px-4">
+                        <a href="#" class="hover:text-amber-600 py-2 transition-colors inline-flex items-center">
+                            About Us <i class="fas fa-chevron-down ml-2 text-xs"></i>
+                        </a>
+                        <div class="absolute hidden group-hover:block w-48 bg-white text-gray-800 shadow-lg rounded-md top-full z-50">
+                            <div class="py-2 divide-y divide-gray-100">
+                                <a href="about us_history.html" class="block px-4 py-2 hover:bg-amber-600 hover:text-white transition-colors">Our History</a>
+                                <a href="about us_mission & values.html" class="block px-4 py-2 hover:bg-amber-600 hover:text-white transition-colors">Mission & Values</a>
+                                <a href="about us_our team.html" class="block px-4 py-2 hover:bg-amber-600 hover:text-white transition-colors">Our Team</a>
+                                <a href="about us_location.html" class="block px-4 py-2 hover:bg-amber-600 hover:text-white transition-colors">Location</a>
+                                <a href="about us_careers.html" class="block px-4 py-2 hover:bg-amber-600 hover:text-white transition-colors">Careers</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group px-4">
+                        <a href="#" class="hover:text-amber-600 py-2 transition-colors inline-flex items-center">
+                            Practice Areas <i class="fas fa-chevron-down ml-2 text-xs"></i>
+                        </a>
+                        <div class="absolute hidden group-hover:block w-48 bg-white text-gray-800 shadow-lg rounded-md top-full z-50">
+                            <div class="py-2 divide-y divide-gray-100">
+                                <a href="#" class="block px-4 py-2 hover:bg-amber-600 hover:text-white transition-colors">Criminal Law</a>
+                                <a href="#" class="block px-4 py-2 hover:bg-amber-600 hover:text-white transition-colors">Family Law</a>
+                                <a href="#" class="block px-4 py-2 hover:bg-amber-600 hover:text-white transition-colors">Corporate Law</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="legal insights.html" class="hover:text-amber-600 px-4 py-2 transition-colors">Legal Insights</a>
+                    <a href="#" class="hover:text-amber-600 px-4 py-2 transition-colors">Testimonials</a>
+                    <a href="#" class="hover:text-amber-600 px-4 py-2 transition-colors">Contact</a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white hover:text-amber-600 p-2 focus:outline-none transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden fixed inset-0 bg-slate-900 bg-opacity-95 transform translate-x-full transition-transform duration-300 ease-in-out z-50">
+        <!-- Header with close button -->
+        <div class="flex justify-between items-center p-4 border-b border-gray-700">
+            <h2 class="text-white text-xl font-bold">Menu</h2>
+            <button id="close-menu" class="text-white hover:text-amber-600 p-2 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu Items -->
+        <div class="h-[calc(100vh-70px)] overflow-y-auto">
+            <div class="flex flex-col p-4 divide-y divide-gray-700">
+                <a href="#" class="text-white text-lg font-medium hover:bg-amber-600 py-3 px-4 rounded-lg transition-all">
+                    Home
+                </a>
+                
+                <!-- About Us Dropdown -->
+                <div class="py-2">
+                    <button class="mobile-dropdown-btn w-full text-white text-lg font-medium hover:bg-amber-600 py-3 px-4 rounded-lg transition-all flex items-center justify-between">
+                        About Us
+                        <i class="fas fa-chevron-down text-sm transition-transform duration-300"></i>
+                    </button>
+                    <div class="mobile-dropdown-content hidden px-4 py-2 mt-1">
+                        <a href="about us_history.html" class="block text-white hover:bg-amber-600 px-4 py-2 rounded-md transition-colors">Our History</a>
+                        <a href="about us_mission & values.html" class="block text-white hover:bg-amber-600 px-4 py-2 rounded-md transition-colors">Mission & Values</a>
+                        <a href="about us_our team.html" class="block text-white hover:bg-amber-600 px-4 py-2 rounded-md transition-colors">Our Team</a>
+                        <a href="about us_location.html" class="block text-white hover:bg-amber-600 px-4 py-2 rounded-md transition-colors">Location</a>
+                        <a href="about us_careers.html" class="block text-white hover:bg-amber-600 px-4 py-2 rounded-md transition-colors">Careers</a>
+                    </div>
+                </div>
+
+                <!-- Practice Areas Dropdown -->
+                <div class="py-2">
+                    <button class="mobile-dropdown-btn w-full text-white text-lg font-medium hover:bg-amber-600 py-3 px-4 rounded-lg transition-all flex items-center justify-between">
+                        Practice Areas
+                        <i class="fas fa-chevron-down text-sm transition-transform duration-300"></i>
+                    </button>
+                    <div class="mobile-dropdown-content hidden px-4 py-2 mt-1">
+                        <a href="#" class="block text-white hover:bg-amber-600 px-4 py-2 rounded-md transition-colors">Criminal Law</a>
+                        <a href="#" class="block text-white hover:bg-amber-600 px-4 py-2 rounded-md transition-colors">Family Law</a>
+                        <a href="#" class="block text-white hover:bg-amber-600 px-4 py-2 rounded-md transition-colors">Corporate Law</a>
+                    </div>
+                </div>
+
+                <a href="legal insights.html" class="text-white text-lg font-medium hover:bg-amber-600 py-3 px-4 rounded-lg transition-all">
+                    Legal Insights
+                </a>
+                <a href="#" class="text-white text-lg font-medium hover:bg-amber-600 py-3 px-4 rounded-lg transition-all">
+                    Testimonials
+                </a>
+                <a href="#" class="text-white text-lg font-medium hover:bg-amber-600 py-3 px-4 rounded-lg transition-all">
+                    Contact
+                </a>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="absolute bottom-0 left-0 right-0 bg-slate-800 p-6">
+                <div class="flex justify-center space-x-8">
+                    <a href="#" class="text-white hover:text-amber-600 transition-colors">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-amber-600 transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-amber-600 transition-colors">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search Component -->
+    <div class="search-container fixed top-0 left-0 w-full bg-slate-900 bg-opacity-95 transform -translate-y-full transition-transform duration-300 ease-in-out z-40">
+        <div class="max-w-4xl mx-auto px-4 py-6">
+            <div class="relative">
+                <input type="text" id="search-input" 
+                    class="w-full bg-transparent border-b-2 border-gray-600 focus:border-amber-600 text-white text-xl px-4 py-2 focus:outline-none"
+                    placeholder="Search...">
+                <button id="close-search" class="absolute right-0 top-1/2 -translate-y-1/2 text-white hover:text-amber-600">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <div id="search-results" class="mt-4 max-h-96 overflow-y-auto hidden">
+                <div class="bg-white rounded-lg shadow-xl">
+                    <div class="divide-y divide-gray-200">
+                        <!-- Dynamic results will appear here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Trigger Button -->
+    <button id="search-trigger" class="fixed top-4 right-20 md:right-4 text-white hover:text-amber-600 transition-colors z-50">
+        <i class="fas fa-search text-xl"></i>
+    </button>
+
+    <script>
+        const searchContainer = document.querySelector('.search-container');
+        const searchTrigger = document.getElementById('search-trigger');
+        const closeSearch = document.getElementById('close-search');
+        const searchInput = document.getElementById('search-input');
+        const searchResults = document.getElementById('search-results');
+
+        // Collect all searchable content from the page
+        function getSearchableContent() {
+            const content = [];
+            document.querySelectorAll('h1, h2, h3, p, a').forEach(element => {
+                if (element.textContent.trim()) {
+                    content.push({
+                        text: element.textContent.trim(),
+                        url: element.tagName === 'A' ? element.href : window.location.href,
+                        type: element.tagName.toLowerCase()
+                    });
+                }
+            });
+            return content;
+        }
+
+        // Search function
+        function performSearch(query) {
+            const content = getSearchableContent();
+            return content.filter(item => 
+                item.text.toLowerCase().includes(query.toLowerCase())
+            );
+        }
+
+        searchTrigger.addEventListener('click', () => {
+            searchContainer.classList.remove('-translate-y-full');
+            searchInput.focus();
+        });
+
+        closeSearch.addEventListener('click', () => {
+            searchContainer.classList.add('-translate-y-full');
+            searchInput.value = '';
+            searchResults.classList.add('hidden');
+        });
+
+        searchInput.addEventListener('input', debounce(() => {
+            if (searchInput.value.length > 2) {
+                const results = performSearch(searchInput.value);
+                if (results.length > 0) {
+                    searchResults.classList.remove('hidden');
+                    const resultsHTML = results.map(result => `
+                        <a href="${result.url}" class="block p-4 hover:bg-gray-50">
+                            <div class="text-gray-900 font-medium">${result.text}</div>
+                            <div class="text-sm text-gray-600">Type: ${result.type}</div>
+                        </a>
+                    `).join('');
+                    searchResults.querySelector('.divide-y').innerHTML = resultsHTML;
+                } else {
+                    searchResults.querySelector('.divide-y').innerHTML = `
+                        <div class="p-4 text-gray-600">No results found</div>
+                    `;
+                    searchResults.classList.remove('hidden');
+                }
+            } else {
+                searchResults.classList.add('hidden');
+            }
+        }, 300));
+
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+    </script>
+</nav>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
+    
+    dropdownBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const content = this.nextElementSibling;
+            const icon = this.querySelector('.fa-chevron-down');
+            
+            // Close other dropdowns
+            dropdownBtns.forEach(otherBtn => {
+                if (otherBtn !== btn) {
+                    otherBtn.nextElementSibling.classList.add('hidden');
+                    otherBtn.querySelector('.fa-chevron-down').style.transform = 'rotate(0deg)';
+                }
+            });
+
+            // Toggle current dropdown
+            content.classList.toggle('hidden');
+            icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+        });
+    });
+});
+</script>
+
+<!-- Hero Section -->
+<section class="relative h-48 bg-cover bg-center" style="background-image: url('our history.jpg');">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-slate-900 bg-opacity-70"></div>
+    
+    <!-- Content -->
+    <div class="relative max-w-7xl mx-auto px-4 h-full flex flex-col justify-center">
+        <nav class="text-sm text-gray-300 mb-2">
+            <ol class="flex items-center space-x-2">
+                <li><a href="index.html" class="hover:text-amber-600 transition-colors">Home</a></li>
+                <li><i class="fas fa-chevron-right text-xs mx-2"></i></li>
+                <li><a href="about-us.html" class="hover:text-amber-600 transition-colors">About Us</a></li>
+                <li><i class="fas fa-chevron-right text-xs mx-2"></i></li>
+                <li class="text-amber-600">Careers</li>
+            </ol>
+        </nav>
+        <h1 class="text-4xl font-bold text-white">Careers</h1>
+    </div>
+</section>
+
+<!-- Main Careers Content -->
+<main class="max-w-7xl mx-auto px-4 py-12">
+    <!-- Introduction Section -->
+    <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Join Our Legal Excellence</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">We're always looking for exceptional talent to join our team. At Justice & Associates, we offer challenging work, professional growth, and a collaborative environment.</p>
+    </div>
+
+    <!-- Current Vacancies -->
+    <section class="mb-16">
+        <h3 class="text-2xl font-bold text-slate-900 mb-8">Current Vacancies</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+            <!-- Job Card 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                <h4 class="text-xl font-semibold text-slate-900 mb-2">Corporate Law Associate</h4>
+                <p class="text-gray-600 mb-4">3+ years experience in corporate law practice with focus on M&A</p>
+                <div class="space-y-2 mb-4">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-briefcase text-amber-600"></i>
+                        <span>Full-time</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-map-marker-alt text-amber-600"></i>
+                        <span>Blantyre, Malawi</span>
+                    </div>
+                </div>
+                <button class="bg-amber-600 text-white px-6 py-2 rounded hover:bg-amber-700 transition-colors">Apply Now</button>
+            </div>
+
+            <!-- Job Card 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                <h4 class="text-xl font-semibold text-slate-900 mb-2">Litigation Paralegal</h4>
+                <p class="text-gray-600 mb-4">Experienced paralegal needed for our growing litigation practice</p>
+                <div class="space-y-2 mb-4">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-briefcase text-amber-600"></i>
+                        <span>Full-time</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-map-marker-alt text-amber-600"></i>
+                        <span>Blantyre, Malawi</span>
+                    </div>
+                </div>
+                <button class="bg-amber-600 text-white px-6 py-2 rounded hover:bg-amber-700 transition-colors">Apply Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Join Us Section -->
+    <section class="mb-16 bg-slate-50 p-8 rounded-lg">
+        <h3 class="text-2xl font-bold text-slate-900 mb-8">Why Join Us?</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="text-center p-4">
+                <i class="fas fa-graduation-cap text-3xl text-amber-600 mb-4"></i>
+                <h4 class="text-lg font-semibold mb-2">Professional Development</h4>
+                <p class="text-gray-600">Continuous learning and growth opportunities</p>
+            </div>
+            <div class="text-center p-4">
+                <i class="fas fa-users text-3xl text-amber-600 mb-4"></i>
+                <h4 class="text-lg font-semibold mb-2">Collaborative Culture</h4>
+                <p class="text-gray-600">Work with talented professionals</p>
+            </div>
+            <div class="text-center p-4">
+                <i class="fas fa-balance-scale text-3xl text-amber-600 mb-4"></i>
+                <h4 class="text-lg font-semibold mb-2">Meaningful Work</h4>
+                <p class="text-gray-600">Make a real difference in people's lives</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Process -->
+    <section class="mb-16">
+        <h3 class="text-2xl font-bold text-slate-900 mb-8">Application Process</h3>
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="flex-1 bg-white p-6 rounded-lg shadow-md">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="bg-amber-600 text-white w-8 h-8 rounded-full flex items-center justify-center">1</span>
+                    <h4 class="font-semibold">Submit Application</h4>
+                </div>
+                <p class="text-gray-600 ml-12">Send your CV and cover letter</p>
+            </div>
+            <div class="flex-1 bg-white p-6 rounded-lg shadow-md">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="bg-amber-600 text-white w-8 h-8 rounded-full flex items-center justify-center">2</span>
+                    <h4 class="font-semibold">Initial Interview</h4>
+                </div>
+                <p class="text-gray-600 ml-12">Meet with our HR team</p>
+            </div>
+            <div class="flex-1 bg-white p-6 rounded-lg shadow-md">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="bg-amber-600 text-white w-8 h-8 rounded-full flex items-center justify-center">3</span>
+                    <h4 class="font-semibold">Final Interview</h4>
+                </div>
+                <p class="text-gray-600 ml-12">Meet with practice leaders</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="bg-slate-900 text-white p-8 rounded-lg">
+        <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold mb-4">Contact Our HR Team</h3>
+            <p class="text-gray-300">Have questions about our opportunities?</p>
+        </div>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+            <a href="mailto:careers@justice.com" class="flex items-center gap-2 hover:text-amber-600 transition-colors">
+                <i class="fas fa-envelope"></i>
+                careers@justice.com
+            </a>
+            <a href="#" class="flex items-center gap-2 hover:text-amber-600 transition-colors">
+                <i class="fab fa-linkedin"></i>
+                Follow us on LinkedIn
+            </a>
+        </div>
+    </section>
+</main>
+
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <!-- Main Footer Content -->
+            <div class="grid md:grid-cols-4 gap-8 mb-8 pb-8 border-b border-gray-700">
+            <!-- About Section -->
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold text-amber-600">Justice & Associates</h3>
+                <p class="text-gray-300 hover:text-white transition-colors duration-300">
+                Committed to excellence in legal services since 2015. We provide expert counsel with integrity and dedication.
+                </p>
+                <!-- Social Media Icons -->
+                <div class="flex space-x-4 pt-4">
+                <a href="#" class="text-gray-400 hover:text-amber-600 transform hover:scale-110 transition-all">
+                    <i class="fab fa-facebook-f text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-amber-600 transform hover:scale-110 transition-all">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-amber-600 transform hover:scale-110 transition-all">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xl font-bold text-amber-600 mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-amber-600 transition-colors flex items-center gap-2">
+                    <i class="fas fa-chevron-right text-xs"></i>About Us</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-amber-600 transition-colors flex items-center gap-2">
+                    <i class="fas fa-chevron-right text-xs"></i>Practice Areas</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-amber-600 transition-colors flex items-center gap-2">
+                    <i class="fas fa-chevron-right text-xs"></i>Privacy Policy</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-amber-600 transition-colors flex items-center gap-2">
+                    <i class="fas fa-chevron-right text-xs"></i>Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Information -->
+            <div>
+                <h3 class="text-xl font-bold text-amber-600 mb-4">Contact Us</h3>
+                <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                    <i class="fas fa-map-marker-alt text-amber-600 mt-1"></i>
+                    <span class="text-gray-300">Victoria Avenue<br>Blantyre, Malawi</span>
+                </li>
+                <li class="flex items-center gap-3">
+                    <i class="fas fa-phone text-amber-600"></i>
+                    <a href="tel:+2651234567" class="text-gray-300 hover:text-amber-600 transition-colors">+265 1 234 567</a>
+                </li>
+                <li class="flex items-center gap-3">
+                    <i class="fas fa-envelope text-amber-600"></i>
+                    <a href="mailto:info@justice&associates.com" class="text-gray-300 hover:text-amber-600 transition-colors">info@justice.com</a>
+                </li>
+                </ul>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div>
+                <h3 class="text-xl font-bold text-amber-600 mb-4">Newsletter</h3>
+                <p class="text-gray-300 mb-4">Stay updated with our latest legal insights and news.</p>
+                <form class="space-y-3">
+                <input type="email" placeholder="Your email address" 
+                    class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-amber-600 text-white">
+                <button type="submit" 
+                    class="w-full bg-amber-600 hover:bg-amber-700 text-white py-2 px-4 rounded-lg transition-colors">
+                    Subscribe
+                </button>
+                </form>
+            </div>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="text-center text-gray-400 pt-4">
+            <p>&copy; 2025 Justice & Associates. All rights reserved.</p>
+            </div>
+
+            <!-- Scroll to Top Button -->
+            <button id="scrollToTop" 
+            class="fixed bottom-8 right-8 bg-amber-600 text-white p-3 rounded-full shadow-lg hover:bg-amber-700 transition-colors hidden">
+            <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+
+        <script>
+            // Scroll to Top functionality
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            
+            window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.remove('hidden');
+            } else {
+                scrollToTopBtn.classList.add('hidden');
+            }
+            });
+
+            scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            });
+        </script>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.remove('translate-x-full');
+        });
+
+        document.getElementById('close-menu').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.add('translate-x-full');
+        });
+    </script>
+</body>
+</html>
